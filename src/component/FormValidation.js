@@ -1,6 +1,6 @@
 import React from 'react'
 import useForm from '../hooks/useForm'
-
+import "./FormValidation.css"
 const FormValidation = () => {
     const {handleChange,values,handleSubmit,errors}=useForm();
     return (
@@ -18,7 +18,7 @@ const FormValidation = () => {
 
                         onChange={handleChange}
                         value={values.Username} />
-                        {errors.Username && <p>{errors.Username}</p>}
+                        {errors.Username && <p className='errors'>{errors.Username}</p>}
                 </div>
                 <div className="form-inputs">
                     <label className='form-label' htmlFor='Email'>Email</label>
@@ -30,7 +30,7 @@ const FormValidation = () => {
                         id='Email'
                         onChange={handleChange}
                         value={values.Email} />
-                        {errors.Email && <p>{errors.Email}</p>}
+                        {errors.Email && <p className='errors'>{errors.Email}</p>}
                 </div>
                 <div className="form-inputs">
                     <label className='form-label' htmlFor='Password'>Password</label>
@@ -43,7 +43,7 @@ const FormValidation = () => {
 
                         onChange={handleChange}
                         value={values.Password} />
-                        {errors.Password && <p>{errors.Password}</p>}
+                        {errors.Password && <p className='errors'>{errors.Password}</p>}
                 </div>
                 <div className="form-inputs">
                     <label className='form-label' htmlFor='CPassword'>Confirm Password</label>
@@ -56,7 +56,7 @@ const FormValidation = () => {
                         onChange={handleChange}
                         value={values.CPassword}
                     />
-                    {errors.CPassword && <p>{errors.CPassword}</p>}
+                    {errors.CPassword && <p className='errors'>{errors.CPassword}</p>}
                 </div>
                 <button className="form-button" type='submit'>Sign-up</button>
                 <span className="login">Already have an account ? Login <a href="www.google.com">here</a></span>

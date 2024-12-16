@@ -9,13 +9,13 @@ export default function Validate(values){
     if(!values.Password.trim()){
         errors.Password="Password Required"
     }
-    else if(values.Password<6){
+    else if(values.Password < 6){
         errors.Password="Password must me greater then 6"
     }
     if(!values.CPassword.trim()){
-         errors.Password="Password Required"
+         errors.CPassword=" Confirm Password Required"
     }
-    else if(values.Password!==CPassword){
+    else if(values.CPassword!==Password){
         errors.CPassword="password not matched"
         
     }
